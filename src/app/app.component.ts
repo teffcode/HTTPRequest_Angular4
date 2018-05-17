@@ -9,13 +9,14 @@ import { Users } from './services/users/users';
 })
 export class AppComponent {
   title = 'app';
+  users: any;
 
   constructor(public usersService: UsersService) {}
 
   searchUsers(){
     this.usersService.getUsers()
       .subscribe(response => {
-        console.log('res - ', response);
+        this.users = response.body;
       });
   }
 }

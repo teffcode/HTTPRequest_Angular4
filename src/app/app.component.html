@@ -4,5 +4,6 @@
     HTTP Request Prub !
   </h1>
   <button (click)="searchUsers()">GET</button>
+  <div *ngFor="let user of users">{{ user.name }}</div>
 </div>
 
